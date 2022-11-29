@@ -1,7 +1,5 @@
 ﻿// 33. Задать массив из 8 элементов, заполненных нулями и единицами вывести их на экран
 
-//Задать массив из 12 элементов, заполненных числами из [-9, 9]. Найти сумму положительных/отрицательных элементов массива
-
 int[] RandomIntArray(int size=10,int min=0,int max=100)
 {
     int[] a=new int[size];
@@ -11,30 +9,13 @@ int[] RandomIntArray(int size=10,int min=0,int max=100)
     return a;
 }
 
-int SumPositive(int[] a)
-{
-    int s=0;
-    foreach(int el in a)
-        if (el>0) s=s+el;
-    return s;
-}
-
-int SumNegative(int[] a)
-{
-    int s=0;
-    foreach(int el in a)
-        if (el<0) s=s+el;
-    return s;
-}
-
 void Print(int[] a)
 {
     for(int i=0;i<a.Length;i++)
         System.Console.Write($"{a[i],5}");
 }
 
-int[] a=RandomIntArray(12,-9,9);
+int[] a=RandomIntArray(8,0,1);
 Print(a);
-System.Console.WriteLine();
-System.Console.WriteLine($"Сумма положительных {SumPositive(a)}");
-System.Console.WriteLine($"Сумма отрицательных {SumNegative(a)}");
+
+
