@@ -1,4 +1,4 @@
-﻿//84. Определить являются ли введенные с клавиатуры символы
+﻿// 84. Определить являются ли введенные с клавиатуры символы 
 // правильно записью целого числа. Вычислить сумму цифр введенного числа
 
 int SumDigits(int n)
@@ -18,12 +18,6 @@ int n;
 bool flag=int.TryParse(s,out n);
 if (flag)
 {
-    
-    // foreach(char c in s)
-    //   if (char.IsDigit(c))
-    //   //sum=sum+(int)char.GetNumericValue(c);
-    //   sum=sum+(c-'0');
-    System.Console.WriteLine($"{n} {SumDigits(n)}");
-
+    System.Console.WriteLine($"Сумма цифр числа {n} = {SumDigits(n)}");
 } 
-else System.Console.WriteLine("Wrong number");
+else System.Console.WriteLine("Не целое число");
